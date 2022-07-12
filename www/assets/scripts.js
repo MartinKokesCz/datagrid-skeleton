@@ -1,28 +1,26 @@
 var finishFlash = function() {
-	if ($('.flash').length > 0) {
+	if (document.getElementsByClassName('flash').length > 0) {
 		setTimeout(
 	  		function() {
-	  			$('.flash').remove();
+	  			document.getElementsByClassName('flash')[0].remove();
 	  		},
 	  		4000
 	  	);
 	}
 };
 
-if (typeof naja !== "undefined") {
-	function FlashesExtension(naja) {
-	    naja.addEventListener('complete', finishFlash);
+var FlashesExtension = function() {
+	this.name = "flash";
 
-	    return this;
+	this.initialize = function (naja) {
+		naja.addEventListener('complete', finishFlash);
 	}
-
-	naja.registerExtension(FlashesExtension);
-} else {
-	$.nette.ext('flashes', {
-	  complete: function() {
-	  	finishFlash();
-	  }
-	});
 }
 
-finishFlash();
+naja.registerExtension(new FlashesExtension());
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', finishFlash);
+} else {
+	finishFlash();
+}
