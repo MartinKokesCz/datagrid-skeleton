@@ -15,7 +15,7 @@ import {
 	SortableJS,
 	SortablePlugin,
 	TomSelect,
-	TreeViewPlugin,
+	//TreeViewPlugin,
 	VanillaDatepicker
 } from "@contributte/datagrid/assets";
 import { NajaAjax } from "@contributte/datagrid/assets/ajax";

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3cd2f19a97d67000400c328a59e7527",
+    "content-hash": "e3d3679d9460a7f8a252cd9a4bd02038",
     "packages": [
         {
             "name": "contributte/application",
@@ -2435,23 +2435,23 @@
         },
         {
             "name": "ublaboo/datagrid",
-            "version": "dev-next",
+            "version": "dev-datepicker-input",
             "source": {
                 "type": "git",
-                "url": "https://github.com/contributte/datagrid.git",
-                "reference": "d7bbdacb738565bf0adef37059b179c33104fa0f"
+                "url": "https://github.com/MartinKokesCz/datagrid.git",
+                "reference": "cb059a404e0cd41d1fdf7a410b66f473a9973287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/datagrid/zipball/d7bbdacb738565bf0adef37059b179c33104fa0f",
-                "reference": "d7bbdacb738565bf0adef37059b179c33104fa0f",
+                "url": "https://api.github.com/repos/MartinKokesCz/datagrid/zipball/cb059a404e0cd41d1fdf7a410b66f473a9973287",
+                "reference": "cb059a404e0cd41d1fdf7a410b66f473a9973287",
                 "shasum": ""
             },
             "require": {
                 "contributte/application": "^0.5.0",
                 "nette/di": "^3.0.0",
                 "nette/forms": "^3.1.3",
-                "nette/utils": "^3.0.1",
+                "nette/utils": "^3.0.1 || ^4.0.0",
                 "php": ">=8.0",
                 "symfony/property-access": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
             },
@@ -2481,10 +2481,17 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Ublaboo\\DataGrid\\": "src/"
+                    "Contributte\\Datagrid\\": "src/"
+                },
+                "files": [
+                    "./compatibility.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Contributte\\Datagrid\\Tests\\": "tests"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2508,20 +2515,9 @@
                 "table"
             ],
             "support": {
-                "issues": "https://github.com/contributte/datagrid/issues",
-                "source": "https://github.com/contributte/datagrid/tree/next"
+                "source": "https://github.com/MartinKokesCz/datagrid/tree/datepicker-input"
             },
-            "funding": [
-                {
-                    "url": "https://contributte.org/partners.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/f3l1x",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-03-20T09:19:46+00:00"
+            "time": "2023-08-21T14:43:30+00:00"
         }
     ],
     "packages-dev": [
